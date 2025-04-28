@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Styles/globaloutput.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="flex justify-between items-center bg-gray-800 p-4 text-white">
+      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full">
+      <h1 class="text-2xl font-bold">Web Informativa - sobre cabimas</h1>
+    </div>
+    <div class="relative w-full overflow-hidden">
+      <div class="flex transition-transform duration-500 ease-in-out" id="carousel" style="gap: 0;">
+      <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen 1" class="w-full h-64 object-cover flex-shrink-0">
+      <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen 2" class="w-full h-64 object-cover flex-shrink-0">
+      <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen 3" class="w-full h-64 object-cover flex-shrink-0">
+      </div>
+    </div>
+
+    <div class="bg-gray-800 p-4 text-white">
+      <nav class="flex justify-around">
+        <a href="home.html" class="hover:text-gray-400">Inicio</a>
+        <a href="news.html" class="hover:text-gray-400">Noticias</a>
+        <a href="aboutus.html" class="hover:text-gray-400">Sobre Nosotros</a>
+        <a href="gazette.html" class="hover:text-gray-400">Gaceta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold underline">Gaceta</h1>
+      <p class="mt-4">Aquí encontrarás información relevante y actualizada.</p>
+    </section>
+
+    <section class="container mx-auto p-4">
+      <h2 class="text-2xl font-bold">Últimas Noticias</h2>
+      <ul class="list-disc pl-5 mt-2">
+        <li><a href="#" class="text-blue-500 hover:underline">Noticia 1</a></li>
+        <li><a href="#" class="text-blue-500 hover:underline">Noticia 2</a></li>
+        <li><a href="#" class="text-blue-500 hover:underline">Noticia 3</a></li>
+      </ul>
+    </section>
+
+    <section class="container mx-auto p-4">
+      <h2 class="text-2xl font-bold">Sobre Nosotros</h2>
+      <p class="mt-2">Somos una organización dedicada a proporcionar información precisa y actualizada.</p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2023 Web Informativa. Todos los derechos reservados.</p>
+    <p>Desarrollado por xxxxx</p>
+  </footer>
+
+  <script src="../Pages/js/imgcarousel.js"></script>
+</body>
+</html>
