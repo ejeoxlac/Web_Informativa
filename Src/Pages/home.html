@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../Styles/globaloutput.css">
-  <link rel="icon" href="../Assets/Img/logo_pp.ico" type="image/x-icon">
-  <title>Web - Informativa</title>
+  <link rel="icon" href="../Assets/Img/logoweb.ico" type="image/x-icon">
+  <title>Web sobre Cabimas</title>
 </head>
 <body>
-  <header class="bg-gray-800 text-white fixed flex items-center justify-between w-full top-0 z-50 h-16 p-4">
-    <div class="flex bg-gray-800 text-white mr-10">
-      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+  <header class="bg-gray-800 text-white w-full h-16 z-50 p-4 top-0 fixed flex justify-between items-center">
+    <div>
+      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 04-05-2025 -->
     </div>
 
-    <nav class="pl-35">
-      <ul class="flex m-0 [&>li>a]:inline-block [&>li>a]:px-2">
+    <nav class="ml-35">
+      <ul class="flex [&>li>a]:px-1.5">
         <li><a href="home.html" class="hover:text-gray-400">Inicio</a></li>
         <li><a href="news.html" class="hover:text-gray-400">Noticias</a></li>
         <li><a href="services.html" class="hover:text-gray-400">Servicios</a></li>
@@ -23,150 +23,206 @@
     </nav>
 
     <nav>
-      <ul class="flex m-0 [&>li>a]:inline-block [&>li>a]:px-2">
+      <ul class="flex [&>li>a]:px-1.5">
         <li><a href="officials.html" class="hover:text-gray-400">Funcionarios</a></li>
-        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre Nosotros</a></li>
+        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre nosotros</a></li>
         <li><a href="History.html" class="hover:text-gray-400">Historia</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <div class="relative mt-16 w-full overflow-hidden">
-        <div class="flex transition-transform duration-500 ease-in-out" id="carousel" style="gap: 0;">
-          <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen 1" class="w-screen h-80 object-cover flex-shrink-0">
-          <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen 2" class="w-screen h-80 object-cover flex-shrink-0">
-          <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen 3" class="w-screen h-80 object-cover flex-shrink-0">
-        </div>
-        <h1 class="absolute pr-20 top-0 left-0 w-full h-full flex items-center justify-center text-white text-2xl font-bold bg-neutral-950/50">Web Informativa - Cabimas</h1>
+    <section class="w-full mt-16 relative overflow-hidden"> <!-- Sección de la imagen de fondo -->
+      <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-80 flex-shrink-0 object-cover">
       </div>
+      <h1 class="bg-neutral-950/50 text-white font-bold text-3xl w-full h-full mr-20 top-0 left-0 absolute flex justify-center items-center">Web nformativa sobre la Ciudad de Cabimas</h1>
     </section>
 
     <section>
-      <div class="flex w-full">
-        <div class="flex flex-col flex-grow">
-          <div class=" mx-auto p-4 w-full flex-1">
-            <h1 class="text-3xl font-bold underline">Bienvenido a la Web Informativa</h1>
-            <p class="mt-4">Aquí encontrarás información relevante y actualizada.</p>
-          </div>          
-          <div class="bg-gray-200 mx-auto p-4 w-full flex-1">
-            <h2 class="text-2xl font-bold">Sobre Nosotros</h2>
-            <p class="mt-2">Somos una organización dedicada a proporcionar información precisa y actualizada.</p>
+      <div class="w-full flex"> <!-- Sección de contenido principal que se divide en 3 cuadros -->
+        <div class="flex flex-col flex-grow"> <!-- Cuadro principal del contenido que se divide en dos -->
+          <div class="w-full mx-auto p-4 flex-1">
+            <h1 class="text-2xl font-bold underline">Web informativa sobre la Ciudad de Cabimas</h1>
+            <p class="mt-2">Aquí encontrarás información relevante y actualizada sobre los servicios e historia de la Ciudad.</p>
+            <h2 class="text-xl font-bold mt-4">Ubicación de la Ciudad de Cabimas</h2>
+            <p class="mt-2">Este el mapa de de la Ciudad de Cabimas</p>
+            <div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61645.40973649545!2d-71.46995015831841!3d10.391664271939936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89c76a94216b2b%3A0x248a8285349a4935!2sCabimas%2C%20Zulia!5e1!3m2!1ses-419!2sve!4v1746407667909!5m2!1ses-419!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-        </div>
-        <div class="bg-blue-200 mx-auto p-4 w-64 h-auto">
-          <h2 class="text-2xl font-bold">Últimas Noticias</h2>
-          <ul class="pl-2 mt-2">
-            <li class="bg-white"><a href="#" class="text-blue-500 hover:underline">
-              <div class="max-w-sm rounded overflow-hidden shadow-lg h-60 overflow-y-scroll">
-                <img class="w-screen h-20" src="../Assets/Img/cabimasbg_01.webp" alt="Notica-1">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Notica-1</div>
-                  <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                  </p>
+          <div class="bg-gray-200 w-full mx-auto p-4 flex-1">
+            <h1 class="text-2xl font-bold underline">Sobre Nosotros</h1>
+            <p class="mt-2">Somos una organización dedicada a proporcionar información precisa y actualizada.</p>
+            <h2 class="text-xl font-bold">Miembros del Equipo de Desarrollo</h2>
+            <ol class="mt-2 pl-5 flex gap-4">
+              <li class="flex flex-col items-center">
+                <img src="../Assets/Img/profiles/profile_1.jpg" alt="Logo" class="w-20 h-20 mb-2 rounded-full">
+                <p class="text-lg font-semibold">Llib Antonio - Director</p>
+              </li>
+              <li class="flex flex-col items-center">
+                <img src="../Assets/Img/profiles/profile_2.jpg" alt="Logo" class="w-20 h-20 mb-2 rounded-full">
+                <p class="text-lg font-semibold">Billy Ion - Coordinador</p>
+              </li>
+              <li class="flex flex-col items-center">
+                <img src="../Assets/Img/profiles/profile_3.jpg" alt="Logo" class="w-20 h-20 mb-2 rounded-full">
+                <p class="text-lg font-semibold">Bill Anthony - Investigador</p>
+              </li>
+            </ol>
+          </div>
+        </div> <!-- Final del cuadro principal del contenido que se divide en dos -->
+        <div class="bg-blue-200 w-64 h-auto mx-auto p-4"> <!-- Cuadro lateral derecho que muestra algunas noticias -->
+          <h1 class="text-2xl font-bold underline">Últimas Noticias</h1>
+          <ol class="mt-4 flex flex-col gap-4">
+            <li class="bg-white">
+              <a href="#" class="text-blue-500 hover:underline">
+                <div class="max-w-sm h-60 rounded shadow-lg overflow-y-scroll">
+                  <img class="w-screen h-20" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
+                  <div class="px-6 py-4">
+                    <h1 class="text-xl font-bold mb-2">Noticia-1</h1>
+                    <p class="text-gray-700 text-base">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
+                    </p>
+                  </div>
+                  <div class="px-6 pt-4 pb-2 flex flex-wrap">
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#mantenimientos</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#obraspúblicas</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#larosa</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#calles</span>
+                  </div>
                 </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Politica</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Leyes</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Cabimas</span>
+              </a>
+            </li>
+            <li class="bg-white">
+              <a href="#" class="text-blue-500 hover:underline">
+                <div class="max-w-sm h-60 rounded shadow-lg overflow-y-scroll">
+                  <img class="w-screen h-20" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
+                  <div class="px-6 py-4">
+                    <h1 class="text-xl font-bold mb-2">Noticia-2</h1>
+                    <p class="text-gray-700 text-base">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
+                    </p>
+                  </div>
+                  <div class="px-6 pt-4 pb-2 flex flex-wrap">
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#politica</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#leyes</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#cabimas</span>
+                  </div>
                 </div>
-              </div>
-            </a></li>
-            <li class="mt-4 bg-white"><a href="#" class="text-blue-500 hover:underline">
-              <div class="max-w-sm rounded overflow-hidden shadow-lg h-60 overflow-y-scroll">
-                <img class="w-screen h-20" src="../Assets/Img/cabimasbg_01.webp" alt="Notica-1">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Notica-2</div>
-                  <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                  </p>
+              </a>
+            </li>
+            <li class="bg-white">
+              <a href="#" class="text-blue-500 hover:underline">
+                <div class="max-w-sm h-60 rounded shadow-lg overflow-y-scroll">
+                  <img class="w-screen h-20" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
+                  <div class="px-6 py-4">
+                    <h1 class="text-xl font-bold mb-2">Noticia-3</h1>
+                    <p class="text-gray-700 text-base">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
+                    </p>
+                  </div>
+                  <div class="px-6 pt-4 pb-2 flex flex-wrap">
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#politica</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#leyes</span>
+                    <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#zulia</span>
+                  </div>
                 </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Politica</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Leyes</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Cabimas</span>
-                </div>
-              </div>
-            </a></li>
-            <li class="mt-4 bg-white"><a href="#" class="text-blue-500 hover:underline">
-              <div class="max-w-sm rounded overflow-hidden shadow-lg h-60 overflow-y-scroll">
-                <img class="w-screen h-20" src="../Assets/Img/cabimasbg_01.webp" alt="Notica-1">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Notica-3</div>
-                  <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                  </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Politica</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Leyes</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Cabimas</span>
-                </div>
-              </div>
-            </a></li>
-          </ul>
-        </div>
+              </a>
+            </li>
+          </ol>
+        </div> <!-- Final del cuadro lateral derecho que muestra algunas noticias -->
+      </div> <!-- Final de la Sección de contenido principal que se divide en 3 cuadros -->
+
+      <div class="mx-auto p-4 flex-1"> <!-- Sección del titulo de temas y servicios -->
+        <h1 class="text-2xl font-bold">Todo sobre temas y servicios de la Ciudad de Cabimas</h1>
       </div>
-      <div class=" mx-auto p-4 flex-1">
-        <h2 class="text-2xl font-bold">Todo sobre temas y servicios</h2>
-      </div>
-      <div class="bg-blue-300 h-2"></div>
-      <div class="bg-gray-200">
-        <div class="">
-          <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 mt-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Acerca de Cabimas y su Gobierno</h2></div>
-                <div><p>Encuentre información sobre Cabimas, quiénes son sus funcionarios electos.</p></div>
-              </a>
-            </li>
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 mt-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Beneficios del Gobierno</h2></div>
-                <div><p>Encuentre información sobre los programas de asistencia, requisitos para solicitar beneficios o ayuda económica, cómo y dónde aplicar.</p></div>
-              </a>
-            </li>
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 mt-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Estafas y fraudes</h2></div>
-                <div><p>Aprenda cómo protegerse de las estafas, fraudes, llamadas de telemercadeo y dónde reportarlas o poner una queja o denuncia.</p></div>
-              </a>
-            </li>
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 mt-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Servicios para personas con discapacidades</h2></div>
-                <div><p>Encuentre ayuda económica y beneficios del Gobierno para personas con discapacidades y sepa cómo seguir recibiéndolos si trabaja o le pagan por cuidar a un familiar.</p></div>
-              </a>
-            </li>
-            <li class=" bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Votaciones y elecciones</h2></div>
-                <div><p>Encuentre información oficial del Gobierno sobre las elecciones y cómo votar.</p></div>
-              </a>
-            </li>
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Vivienda</h2></div>
-                <div><p>Información sobre su hogar, pagar el alquiler, comprar vivienda, terrenos y evitar la ejecución hipotecaria, entre otros.</p></div>
-              </a>
-            </li>
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Leyes y asuntos legales</h2></div>
-                <div><p>Aprenda cómo reemplazar documentos de identidad, reclamar la manutención infantil, apostillar documentos, reportar crímenes y recibir ayuda si fue víctima de un delito.</p></div>
-              </a>
-            </li>
-            <li class="bg-white text-center border-2 border-blue-500 p-2 mb-2 ml-2 mr-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <a href="">
-                <div class="font-bold"><h2>Impuestos</h2></div>
-                <div><p>Aprenda cómo declarar impuestos, pagar impuestos, buscar ayuda para hacer los impuestos, verificar dónde está su reembolso y más.</p></div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="bg-blue-300 h-2"></div> <!-- Línea grafica que separa el titulo de temas y servicios con la seccion mas grande que contiene los temas y servicios -->
+      <div class="bg-gray-200"> <!-- Sección que contiene los temas y servicios que es la sección mas grande con varias divisiones-->
+        <ol class="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Acerca de Cabimas y su Gobierno</h1>
+              </div>
+              <div>
+                <p>Encuentre información sobre Cabimas, quiénes son sus funcionarios electos.</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Beneficios del Gobierno</h1>
+              </div>
+              <div>
+                <p>Encuentre información sobre los programas de asistencia, requisitos para solicitar beneficios o ayuda económica, cómo y dónde aplicar.</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Estafas y fraudes</h1>
+              </div>
+              <div>
+                <p>Aprenda cómo protegerse de las estafas, fraudes, llamadas de telemercadeo y dónde reportarlas o poner una queja o denuncia.</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Servicios para personas con discapacidades</h1>
+              </div>
+              <div>
+                <p>Encuentre ayuda económica y beneficios del Gobierno para personas con discapacidades y sepa cómo seguir recibiéndolos si trabaja o le pagan por cuidar a un familiar.</p>
+              </div>
+            </a>
+          </li>
+          <li class=" bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Votaciones y elecciones</h1>
+              </div>
+              <div>
+                <p>Encuentre información oficial del Gobierno sobre las elecciones y cómo votar.</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Vivienda</h1>
+              </div>
+              <div>
+                <p>Información sobre su hogar, pagar el alquiler, comprar vivienda, terrenos y evitar la ejecución hipotecaria, entre otros.</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Leyes y asuntos legales</h1>
+              </div>
+              <div>
+                <p>Aprenda cómo renovar documentos de identidad, reclamar la manutención infantil, apostillar documentos, reportar crímenes y recibir ayuda si fue víctima de un delito.</p>
+              </div>
+            </a>
+          </li>
+          <li class="bg-white border-blue-500 border-2 text-center mt-2 ml-2 mr-2 mb-2 p-2 shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+            <a href="">
+              <div class="font-bold">
+                <h1>Impuestos</h1>
+              </div>
+              <div>
+                <p>Aprenda cómo declarar impuestos, pagar impuestos, buscar ayuda para hacer los impuestos, verificar dónde está su reembolso y más.</p>
+              </div>
+            </a>
+          </li>
+        </ol>
+      </div> <!-- Final de la sección que contiene los temas y servicios que es la sección mas grande con varias divisiones-->
     </section>
   </main>
 
