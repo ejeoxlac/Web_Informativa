@@ -248,14 +248,14 @@
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
   .mr-10 {
     margin-right: calc(var(--spacing) * 10);
   }
   .mr-20 {
     margin-right: calc(var(--spacing) * 20);
-  }
-  .mr-35 {
-    margin-right: calc(var(--spacing) * 35);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -295,12 +295,6 @@
   }
   .h-60 {
     height: calc(var(--spacing) * 60);
-  }
-  .h-65 {
-    height: calc(var(--spacing) * 65);
-  }
-  .h-70 {
-    height: calc(var(--spacing) * 70);
   }
   .h-80 {
     height: calc(var(--spacing) * 80);
@@ -356,9 +350,6 @@
   .list-disc {
     list-style-type: disc;
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -376,15 +367,6 @@
   }
   .justify-end {
     justify-content: flex-end;
-  }
-  .gap-0 {
-    gap: calc(var(--spacing) * 0);
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -449,9 +431,6 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .px-0 {
-    padding-inline: calc(var(--spacing) * 0);
-  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -470,17 +449,20 @@
   .pr-8 {
     padding-right: calc(var(--spacing) * 8);
   }
+  .pr-10 {
+    padding-right: calc(var(--spacing) * 10);
+  }
   .pr-20 {
     padding-right: calc(var(--spacing) * 20);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
-  .pl-0 {
-    padding-left: calc(var(--spacing) * 0);
-  }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
   }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
@@ -579,11 +561,6 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-  .md\:grid-cols-2 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -592,16 +569,6 @@
   .\[\&\>li\>a\]\:inline-block {
     &>li>a {
       display: inline-block;
-    }
-  }
-  .\[\&\>li\>a\]\:inline-flex {
-    &>li>a {
-      display: inline-flex;
-    }
-  }
-  .\[\&\>li\>a\]\:px-0 {
-    &>li>a {
-      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .\[\&\>li\>a\]\:px-1\.5 {
