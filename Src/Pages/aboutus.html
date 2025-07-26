@@ -8,112 +8,184 @@
   <title>Sobre nosotros - Web sobre Cabimas</title>
 </head>
 <body>
-  <header class="bg-gray-800 text-white w-full h-16 z-50 p-4 top-0 fixed flex justify-between items-center">
-    <div>
-      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 04-05-2025 -->
+  <!-- Header responsive con menú hamburguesa para móviles -->
+  <header class="bg-gray-800 text-white w-full h-auto min-h-16 z-50 p-4 top-0 fixed flex flex-col lg:flex-row justify-between items-center">
+    <div class="flex justify-between items-center w-full lg:w-auto">
+      <div>
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      
+      <!-- Botón hamburguesa para móviles -->
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
 
-    <nav class="ml-35">
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="home.html" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="news.html" class="hover:text-gray-400">Noticias</a></li>
-        <li><a href="services.html" class="hover:text-gray-400">Servicios</a></li>
-        <li><a href="gazette.html" class="hover:text-gray-400">Gaceta</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="officials.html" class="hover:text-gray-400">Funcionarios</a></li>
-        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre nosotros</a></li>
-        <li><a href="History.html" class="hover:text-gray-400">Historia</a></li>
+    <!-- Navegación responsive -->
+    <nav id="nav-menu" class="hidden lg:flex w-full lg:w-auto mt-4 lg:mt-0">
+      <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 w-full lg:w-auto">
+        <li><a href="home.html" class="hover:text-gray-400 px-2 py-1 block">Inicio</a></li>
+        <li><a href="news.html" class="hover:text-gray-400 px-2 py-1 block">Noticias</a></li>
+        <li><a href="services.html" class="hover:text-gray-400 px-2 py-1 block">Servicios</a></li>
+        <li><a href="gazette.html" class="hover:text-gray-400 px-2 py-1 block">Gaceta</a></li>
+        <li><a href="officials.html" class="hover:text-gray-400 px-2 py-1 block">Funcionarios</a></li>
+        <li><a href="aboutus.html" class="hover:text-gray-400 px-2 py-1 block">Sobre nosotros</a></li>
+        <li><a href="History.html" class="hover:text-gray-400 px-2 py-1 block">Historia</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="w-full mt-16 relative overflow-hidden"> <!-- Sección de la imagen de fondo -->
+  <main class="pt-20 lg:pt-16">
+    <!-- Sección del carrusel responsive -->
+    <section class="w-full relative overflow-hidden">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
       </div>
-      <h1 class="bg-neutral-950/50 text-white font-bold text-3xl w-full h-full mr-20 top-0 left-0 absolute flex justify-center items-center">Web nformativa sobre la Ciudad de Cabimas</h1>
+      <h1 class="bg-neutral-950/50 text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl w-full h-full top-0 left-0 absolute flex justify-center items-center text-center px-4">Sobre Nosotros</h1>
     </section>
 
     <section class="bg-gray-300 p-2">
       <div class="p-2">
-        <div class="bg-gray-600/70 border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Sobre la entidad de Cabimas</h1>
-          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Aquí encontrarás información relevante y actualizada.</p>
-          <div class="p-2">
-            <div>
-              <p>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+        <!-- Sección sobre la entidad -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h1 class="bg-gray-800 text-white text-xl sm:text-2xl lg:text-3xl font-bold p-4">🏛️ Sobre la Entidad de Cabimas</h1>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Conoce más sobre nuestra organización y compromiso con la comunidad</p>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_01.webp" alt="Entidad de Cabimas" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  Somos una organización dedicada a proporcionar información precisa y actualizada sobre la Ciudad de Cabimas. Nuestro compromiso es servir como plataforma informativa oficial que conecte a los ciudadanos con todos los aspectos relevantes de nuestra comunidad.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Desde servicios gubernamentales hasta eventos culturales, pasando por noticias locales y recursos comunitarios, nuestra misión es mantener informada a la población de Cabimas sobre todo lo que acontece en nuestra hermosa ciudad.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-gray-600/70 border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Nuestra Misión</h1>
-          <div class="p-2">
-            <div>
-              <p class="text-white">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+        <!-- Sección de misión -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">🎯 Nuestra Misión</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  Nuestra misión es proporcionar información transparente, accesible y actualizada sobre todos los aspectos de la Ciudad de Cabimas. Nos esforzamos por ser el puente de comunicación entre las autoridades locales y los ciudadanos, facilitando el acceso a servicios, noticias y recursos comunitarios.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Buscamos empoderar a la comunidad con información clara y confiable, promoviendo la participación ciudadana y el desarrollo integral de Cabimas a través de la transparencia y la comunicación efectiva.
+                </p>
+              </div>
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_02.webp" alt="Nuestra Misión" class="w-full h-full object-cover">
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-gray-600/70 border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Nuestra Visión</h1>
-          <div class="p-2">
-            <div>
-              <p class="text-white">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+        <!-- Sección de visión -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">🔮 Nuestra Visión</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_03.webp" alt="Nuestra Visión" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  Aspiramos a ser la plataforma digital de referencia para la información de Cabimas, reconocida por su confiabilidad, accesibilidad e innovación tecnológica. Visualizamos una ciudad conectada digitalmente donde cada ciudadano tenga acceso fácil y rápido a la información que necesita.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Nuestra visión incluye el desarrollo de herramientas digitales avanzadas que faciliten la interacción entre gobierno y ciudadanía, promoviendo una sociedad más informada, participativa y comprometida con el desarrollo de Cabimas.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-gray-600/70 border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Nuestro equipo</h1>
-          <div class="p-2">
-            <div>
-              <p class="text-white">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="mt-2">
-                <h3 class="text-white text-xl font-bold">Miembros del Equipo</h3>
-                <ul class=" text-white list-disc pl-5 mt-2 flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full mb-2">
-                    <p class="text-lg font-semibold">xxxxx - Director</p>
+        <!-- Sección de equipo -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">👥 Nuestro Equipo</h2>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Conoce a los profesionales dedicados a servir a la comunidad de Cabimas</p>
+          <div class="p-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="flex flex-col items-center text-center">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shadow-lg mb-4">
+                  <img src="../Assets/Img/profiles/profile_1.jpg" alt="Llib Antonio" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2">Llib Antonio</h3>
+                <p class="text-sm sm:text-base text-gray-600 font-semibold">Director</p>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Líder del equipo de desarrollo web y coordinación de proyectos informativos.</p>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shadow-lg mb-4">
+                  <img src="../Assets/Img/profiles/profile_2.jpg" alt="Billy Ion" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2">Billy Ion</h3>
+                <p class="text-sm sm:text-base text-gray-600 font-semibold">Coordinador</p>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Responsable de la gestión de contenido y comunicación con las autoridades locales.</p>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shadow-lg mb-4">
+                  <img src="../Assets/Img/profiles/profile_3.jpg" alt="Bill Anthony" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2">Bill Anthony</h3>
+                <p class="text-sm sm:text-base text-gray-600 font-semibold">Investigador</p>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Especialista en investigación histórica y documentación de la ciudad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de contacto -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">📞 Contacto</h2>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Estamos aquí para ayudarte. Contáctanos</p>
+          <div class="p-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">Información de Contacto</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center">
+                    <span class="text-2xl mr-3">📧</span>
+                    <div>
+                      <p class="font-semibold text-gray-800">Email</p>
+                      <p class="text-gray-600">contacto@cabimas.gov.ve</p>
+                    </div>
                   </div>
-                  <div>
-                    <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full mb-2">
-                    <p class="text-lg font-semibold">xxxxx - Coordinador</p>
+                  <div class="flex items-center">
+                    <span class="text-2xl mr-3">📞</span>
+                    <div>
+                      <p class="font-semibold text-gray-800">Teléfono</p>
+                      <p class="text-gray-600">+58 264-1234567</p>
+                    </div>
                   </div>
-                  <div>
-                    <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full mb-2">
-                    <p class="text-lg font-semibold">xxxxx - Investigador</p>
+                  <div class="flex items-center">
+                    <span class="text-2xl mr-3">📍</span>
+                    <div>
+                      <p class="font-semibold text-gray-800">Dirección</p>
+                      <p class="text-gray-600">Av. Principal, Cabimas, Zulia</p>
+                    </div>
                   </div>
-                </ul>
-                <ul class="text-white list-disc pl-5 mt-6 flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full mb-2">
-                    <p class="text-lg font-semibold">xxxxx - Diseñador</p>
+                  <div class="flex items-center">
+                    <span class="text-2xl mr-3">🕒</span>
+                    <div>
+                      <p class="font-semibold text-gray-800">Horario de atención</p>
+                      <p class="text-gray-600">Lunes a Viernes 8:00 AM - 5:00 PM</p>
+                    </div>
                   </div>
-                  <div>
-                    <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full mb-2">
-                    <p class="text-lg font-semibold">xxxxx - Desarrollador</p>
-                  </div>
-                  <div>
-                    <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-16 h-16 rounded-full mb-2">
-                    <p class="text-lg font-semibold">xxxxx - Desarrollador</p>
-                  </div>
-                </ul>
+                </div>
+              </div>
+              <div class="h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_04.webp" alt="Oficinas de contacto" class="w-full h-full object-cover">
               </div>
             </div>
           </div>
@@ -122,14 +194,15 @@
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white w-full p-4 top-0 flex justify-center items-center">
-    <div class="mt-0.5 p-4 flex">
-      <div class="border-r-1 mr-10 pr-8 flex"> <!-- Primera parte de la seccion de pie de página -->
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 05-05-2025 -->
-      </div> <!-- Termina la primera parte de la seccion de pie de página -->
-      <div class="border-r-1 pl-2 pr-8"> <!-- Segunda parte de la seccion de pie de página que contiene las redes sociales -->
-        <p class="flex justify-end">Síguenos en nuestras redes sociales:</p>
-        <div class="mt-2 mr-4 flex justify-end">
+  <!-- Footer responsive -->
+  <footer class="bg-gray-800 text-white w-full p-4 flex flex-col lg:flex-row justify-center items-center">
+    <div class="mt-0.5 p-4 flex flex-col lg:flex-row items-center">
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:mr-10 lg:pr-8 flex justify-center">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:pl-2 lg:pr-8 text-center lg:text-left">
+        <p class="flex justify-center lg:justify-end mb-2">Síguenos en nuestras redes sociales:</p>
+        <div class="mt-2 mr-4 flex justify-center lg:justify-end">
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
               <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -139,7 +212,7 @@
                 </g>
               </g>
             </svg>
-            <span>Facebook</span>
+            <span class="text-sm">Facebook</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -150,7 +223,7 @@
                 </g>
               </g>
             </svg>
-            <span>X</span>
+            <span class="text-sm">X</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -161,17 +234,24 @@
                 </g>
               </g>
             </svg>
-            <span>Instragram</span>
+            <span class="text-sm">Instagram</span>
           </a>
         </div>
-      </div> <!-- Final de la segunda parte de la seccion de pie de página que contiene las redes sociales -->
-      <div class="ml-10 pl-2 text-center"> <!-- Tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
-        <p>&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
-        <p>Desarrollado por Ejeoxlac</p>
-      </div> <!-- Final de la tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
+      </div>
+      <div class="lg:ml-10 lg:pl-2 text-center">
+        <p class="text-sm">&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
+        <p class="text-sm">Desarrollado por Ejeoxlac</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/imgcarousel.js"></script> <!-- Script para el carrusel de imagenes de presentación -->
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="../js/imgcarousel.js"></script>
 </body>
 </html>

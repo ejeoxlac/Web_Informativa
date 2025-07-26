@@ -8,98 +8,233 @@
   <title>Historia sobre Cabimas - Web sobre Cabimas</title>
 </head>
 <body>
-  <header class="bg-gray-800 text-white w-full h-16 z-50 p-4 top-0 fixed flex justify-between items-center">
-    <div>
-      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 04-05-2025 -->
+  <!-- Header responsive con menú hamburguesa para móviles -->
+  <header class="bg-gray-800 text-white w-full h-auto min-h-16 z-50 p-4 top-0 fixed flex flex-col lg:flex-row justify-between items-center">
+    <div class="flex justify-between items-center w-full lg:w-auto">
+      <div>
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      
+      <!-- Botón hamburguesa para móviles -->
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
 
-    <nav class="ml-35">
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="home.html" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="news.html" class="hover:text-gray-400">Noticias</a></li>
-        <li><a href="services.html" class="hover:text-gray-400">Servicios</a></li>
-        <li><a href="gazette.html" class="hover:text-gray-400">Gaceta</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="officials.html" class="hover:text-gray-400">Funcionarios</a></li>
-        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre nosotros</a></li>
-        <li><a href="History.html" class="hover:text-gray-400">Historia</a></li>
+    <!-- Navegación responsive -->
+    <nav id="nav-menu" class="hidden lg:flex w-full lg:w-auto mt-4 lg:mt-0">
+      <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 w-full lg:w-auto">
+        <li><a href="home.html" class="hover:text-gray-400 px-2 py-1 block">Inicio</a></li>
+        <li><a href="news.html" class="hover:text-gray-400 px-2 py-1 block">Noticias</a></li>
+        <li><a href="services.html" class="hover:text-gray-400 px-2 py-1 block">Servicios</a></li>
+        <li><a href="gazette.html" class="hover:text-gray-400 px-2 py-1 block">Gaceta</a></li>
+        <li><a href="officials.html" class="hover:text-gray-400 px-2 py-1 block">Funcionarios</a></li>
+        <li><a href="aboutus.html" class="hover:text-gray-400 px-2 py-1 block">Sobre nosotros</a></li>
+        <li><a href="History.html" class="hover:text-gray-400 px-2 py-1 block">Historia</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="w-full mt-16 relative overflow-hidden"> <!-- Sección de la imagen de fondo -->
+  <main class="pt-20 lg:pt-16">
+    <!-- Sección del carrusel responsive -->
+    <section class="w-full relative overflow-hidden">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
       </div>
-      <h1 class="bg-neutral-950/50 text-white font-bold text-3xl w-full h-full mr-20 top-0 left-0 absolute flex justify-center items-center">Web informativa sobre la Ciudad de Cabimas</h1>
+      <h1 class="bg-neutral-950/50 text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl w-full h-full top-0 left-0 absolute flex justify-center items-center text-center px-4">Historia de la Ciudad de Cabimas</h1>
     </section>
 
     <section class="bg-gray-300 p-2">
       <div class="p-2">
-        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Sobre la entidad</h1>
-          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Aquí encontrarás información historica y precisa sobre Cabimas</p>
-          <div class="p-2">
-            <div>
-              <p>
-                La historia de Cabimas comienza con sus primeros pobladores que eran recolectores, cazadores y pescadores, vivían entre el Lago de Maracaibo y la Guajira. El nombre de Cabimas se debe a una planta que los indígenas usaban con fines medicinales, (capaiba).
-
-                Cabimas pasó por tres etapas: Desde 1579 como aldea indígena, luego entre el siglo XVII y XX como pueblo rural y a partir de 1922 como pueblo petrolero. En 1829 Cabimas se reconoció como parroquia eclesiástica integrada al Cantón Altagracia, entre 1830 y 1835 fue elevada a parroquia civil. Entre 1870 y 1904, Cabimas pasó a ser Distrito y en 1989 se creó el Municipio autónomo Cabimas.
-            </div>
-            <div>
-              <div class="mt-4">
-                <h1 class="text-2xl font-bold">
-                  Primeros Pobladores del área de Cabimas
-                </h1>
+        <!-- Introducción -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h1 class="bg-gray-800 text-white text-xl sm:text-2xl lg:text-3xl font-bold p-4">Historia de Cabimas</h1>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Descubre la rica historia de nuestra ciudad desde sus orígenes hasta la actualidad</p>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_01.webp" alt="Vista histórica de Cabimas" class="w-full h-full object-cover">
               </div>
-              <p>
-                Los primeros asentamientos humanos en el municipio Cabimas datan del siglo I de nuestra era, se han encontrado restos de alrededor de 10 asentamientos de diferentes épocas en las parroquias Germán Ríos Linares, San Benito y Arístides Calvani (La Mesa) que demuestran la presencia humana en la zona. Estos asentamientos eran temporales, y la población semi nómada y ganadera. Para el momento de la llegada de los europeos, vivían en Cabimas las tribus de los caquetíos y Añú de etnia arawak, estos últimos en palafitos a orillas del Lago de Maracaibo. Los caquetíos habitaban la Costa Oriental del Lago de Maracaibo, el Estado Falcón, la parte occidental del Estado Lara y las Antillas Neerlandesas. Vivían en chozas de madera y paja, navegaban en canoas, y conocían el mene (petróleo) y el kupaiwa (árbol de aceite o Cabimas) (Copaifera officinalis).
-              </p>
-            </div>
-            <div>
-              <div class="mt-4">
-                <h1 class="text-2xl font-bold">
-                  La Misión
-                </h1>
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  La historia de Cabimas comienza con sus primeros pobladores que eran recolectores, cazadores y pescadores, vivían entre el Lago de Maracaibo y la Guajira. El nombre de Cabimas se debe a una planta que los indígenas usaban con fines medicinales, (capaiba).
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Cabimas pasó por tres etapas: Desde 1579 como aldea indígena, luego entre el siglo XVII y XX como pueblo rural y a partir de 1922 como pueblo petrolero. En 1829 Cabimas se reconoció como parroquia eclesiástica integrada al Cantón Altagracia, entre 1830 y 1835 fue elevada a parroquia civil. Entre 1870 y 1904, Cabimas pasó a ser Distrito y en 1989 se creó el Municipio autónomo Cabimas.
+                </p>
               </div>
-              <p>
-                En 1532, Pedro y Francisco Martí, soldados de Ambrosio Alfinger, fueron los primeros europeos en pisar Cabimas; partieron de Maracaibo realizando un reconocimiento de toda la costa oriental hasta Moporo, donde establecieron «sementeras» (cultivos).
+            </div>
+          </div>
+        </div>
 
-                En 1670 vienen a la Provincia de Maracaibo frailes dominicos con el fin de convertir al catolicismo a los indígenas, esta misión de Santa Rosa de Lima con una capilla rústica todavía existía en 1682, pero para el comienzo del siglo XVIII fue abandonada por razones desconocidas, de ella quedó el nombre de La Rosa.
+        <!-- Primeros Pobladores -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">🏺 Primeros Pobladores del Área de Cabimas</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_02.webp" alt="Asentamientos indígenas" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  Los primeros asentamientos humanos en el municipio Cabimas datan del siglo I de nuestra era, se han encontrado restos de alrededor de 10 asentamientos de diferentes épocas en las parroquias Germán Ríos Linares, San Benito y Arístides Calvani (La Mesa) que demuestran la presencia humana en la zona.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Para el momento de la llegada de los europeos, vivían en Cabimas las tribus de los caquetíos y Añú de etnia arawak, estos últimos en palafitos a orillas del Lago de Maracaibo. Los caquetíos habitaban la Costa Oriental del Lago de Maracaibo, el Estado Falcón, la parte occidental del Estado Lara y las Antillas Neerlandesas.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Vivían en chozas de madera y paja, navegaban en canoas, y conocían el mene (petróleo) y el kupaiwa (árbol de aceite o Cabimas) (Copaifera officinalis).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- La Misión -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">⛪ La Misión y la Evangelización</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_03.webp" alt="Misión de San Antonio" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-3">Primeros Contactos Europeos</h3>
+                <p class="text-sm sm:text-base leading-relaxed">
+                  En 1532, Pedro y Francisco Martí, soldados de Ambrosio Alfinger, fueron los primeros europeos en pisar Cabimas; partieron de Maracaibo realizando un reconocimiento de toda la costa oriental hasta Moporo, donde establecieron «sementeras» (cultivos).
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  En 1670 vienen a la Provincia de Maracaibo frailes dominicos con el fin de convertir al catolicismo a los indígenas, esta misión de Santa Rosa de Lima con una capilla rústica todavía existía en 1682, pero para el comienzo del siglo XVIII fue abandonada por razones desconocidas, de ella quedó el nombre de La Rosa.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-3">Fundación de la Misión de San Antonio</h3>
+              <p class="text-sm sm:text-base leading-relaxed">
                 En 1707 llegaron frailes capuchinos de Valencia con Fray Andrés de los Arcos como comisario y fundaron una primera misión de San Antonio de Punta de Piedras al norte del río Olaya (hoy río Mene); esta misión también tuvo una existencia breve además de que para entonces ya estaba abandonada la misión de la Rosa.
-
-                Cabimas es el nombre dado por los frailes a los indígenas; los frailes ignorando el idioma o cultura de los aborígenes, les daban nombres de árboles locales a las tribus, como Cabimas, Onotos y Cocinas. Cabe destacar que Cabimas es una palabra Caribe y los indígenas de la zona eran arawacos y llamaban al mismo árbol copaiba. Como se acaba de mencionar, el nombre Cabimas es un exónimo, los indios no se llamaban a sí mismos Cabimas, se llamaban Caquetíos, por lo tanto fueron los monjes los que bautizaron a Cabimas. Los indígenas de Cabimas desaparecieron, mestizándose o emigrando y su cultura desapareció. Las aldeas indígenas de la zona no evolucionaron para convertirse en Cabimas, la misión sirvió más bien para ahuyentarlos, las aldeas indígenas no formaron una única Cabimas, palabra además Caribe, idioma que no hablaban.
-
-                El 1º de marzo de 1758 llegaron a Maracaibo frailes capuchinos de la provincia de Navarra y Cantabria. Eran 12 en total y el comisario Fray Andrés de los Arcos Capuchinos de valencia (España). Habían estado en esta Provincia, pero se trasladaron a Santa Fe, y los Navarros ocuparon su lugar.
-
-                Este grupo de frailes fundaron el 22 de diciembre de 1758 la misión de San Antonio de Punta de Piedras. Aunque no hubo guerra de conquista, las crónicas sí narran casos de crueldad contra los aborígenes, azotados y encarcelados por vivir en concubinato luego de haber sido casados por la iglesia, tal era el crimen del que se les acusaba, a los que se refiere esta historia era a los indios traídos a la Misión de San Antonio de Punta de Piedras desde la costa occidental (Mara o Perijá), quienes por lo tanto no eran los indígenas pacíficos de la costa oriental, según la crónica del obispo de Venezuela Mariano Martí en su visita a Cabimas en 1774.
-
-                En 1771, el obispo Mariano Martí Estadella, titular de la Diócesis de Caracas y Venezuela, da comienzo a su extensa visita pastoral por todas sus diócesis, que duró 12 años, 3 meses y 22 días.
-
-                Mariano Martí llegó a la Provincia de Maracaibo por los Puertos de altagracia y el 27 de febrero de 1774 embarcó en un "columbo" de la compañía guipuzcoana para los valles de San Pedro y Santa María del Sur del lago.
-
-                Visitó los diferentes sitios de y pueblos navegando hacia el norte, Valles de Río Seco, Santa María, Moporo, Tocomoro, Misoa, Lagunillas, Tamare, Punta Benítez, Cabimas, La Misión, Ciruma, El Carrizal, Santa Rita.
-
-                Durmió el día 13 en Punta Benítez y el 14 como a las 8 de la mañana llegó al sitio de Cabimas. Es de destacar que el obispo llama Cabimas al sitio que visitó. Lo que enfatizamos es que aunque la misión no persistió en el tiempo, y aunque no fue la semilla de la que crecería Cabimas, la misión le dio el nombre a Cabimas.
-
-                Dice el Obispo en sus libros, Tomo 1, que los vecinos le enseñaron el sitio que habían escogido para una iglesia y que era el mismo que había visto el gobernador de Cabimas. Pasó a la misión de Punta de Piedras donde dice el Obispo existía una iglesia den 1774 bajo la invocación de San Antonio de Padua y que era una misión de Indios fundada en 1758; según él, vio en la primera hoja del libro que comprende todos los parroquiales, copió la nota del tenor siguiente: "Libro de partidas de bautismos, confirmados, matrimoniados, finados y estados de almas del pueblo de indios nombrado San Antonio de Punta de Piedras fundado en 1758, el cual consta de 365 foxas útiles.
-
-                Hizo un censo que hizo en cada pueblo que visitó en la misión vivían 25 familias en 25 casas, de comunión 23, de sola confesión 10, sin bautizar 32, varones 50, hembras 68, fuera del poblado vivían 3 familias.
-
-                En el sitio de Cabimas vivían 19 familias en 20 casas, de comunión 100, de sola confesión 7, 24 niños. En Punta Gorda 5 casas, 5 familias, de comunión 18, de sola confesión 2. Esta misión por lo que pudo ser su edificación debió ser de jurisdicción evangelizadora sobre una extensa superficie territorial.
-
-                Con este testimonio podemos deducir que el origen de lo que hoy tenemos como Cabimas están en la y que la fecha de su fundación en 1758 es válida hasta que otros documentos protocolares desautoricen a los presentados por la Biblioteca de la Academia Nacional de la Historia en la edición Fuentes para la Historia Colonial de Venezuela, 1969, coordinada por Lino Gómez Canedo.
-
-                Tomado de "Copaiba", Órgano Informativo del Centro Histórico Cabimas. Año 1, Nro. 1 de enero-Marzo de 1993
               </p>
+              <p class="text-sm sm:text-base leading-relaxed mt-4">
+                El 1º de marzo de 1758 llegaron a Maracaibo frailes capuchinos de la provincia de Navarra y Cantabria. Eran 12 en total y el comisario Fray Andrés de los Arcos Capuchinos de valencia (España). Habían estado en esta Provincia, pero se trasladaron a Santa Fe, y los Navarros ocuparon su lugar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- El Origen del Nombre -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">🌳 El Origen del Nombre "Cabimas"</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_04.webp" alt="Árbol de Cabimas" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  Cabimas es el nombre dado por los frailes a los indígenas; los frailes ignorando el idioma o cultura de los aborígenes, les daban nombres de árboles locales a las tribus, como Cabimas, Onotos y Cocinas.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Cabe destacar que Cabimas es una palabra Caribe y los indígenas de la zona eran arawacos y llamaban al mismo árbol copaiba. Como se acaba de mencionar, el nombre Cabimas es un exónimo, los indios no se llamaban a sí mismos Cabimas, se llamaban Caquetíos, por lo tanto fueron los monjes los que bautizaron a Cabimas.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Los indígenas de Cabimas desaparecieron, mestizándose o emigrando y su cultura desapareció. Las aldeas indígenas de la zona no evolucionaron para convertirse en Cabimas, la misión sirvió más bien para ahuyentarlos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visita del Obispo Martí -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">📜 La Visita del Obispo Mariano Martí</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_01.webp" alt="Visita pastoral" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <p class="text-sm sm:text-base leading-relaxed">
+                  En 1771, el obispo Mariano Martí Estadella, titular de la Diócesis de Caracas y Venezuela, da comienzo a su extensa visita pastoral por todas sus diócesis, que duró 12 años, 3 meses y 22 días.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Mariano Martí llegó a la Provincia de Maracaibo por los Puertos de altagracia y el 27 de febrero de 1774 embarcó en un "columbo" de la compañía guipuzcoana para los valles de San Pedro y Santa María del Sur del lago.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Visitó los diferentes sitios de y pueblos navegando hacia el norte, Valles de Río Seco, Santa María, Moporo, Tocomoro, Misoa, Lagunillas, Tamare, Punta Benítez, Cabimas, La Misión, Ciruma, El Carrizal, Santa Rita.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-3">El Censo de 1774</h3>
+              <p class="text-sm sm:text-base leading-relaxed">
+                Durmió el día 13 en Punta Benítez y el 14 como a las 8 de la mañana llegó al sitio de Cabimas. Es de destacar que el obispo llama Cabimas al sitio que visitó. Lo que enfatizamos es que aunque la misión no persistió en el tiempo, y aunque no fue la semilla de la que crecería Cabimas, la misión le dio el nombre a Cabimas.
+              </p>
+              <p class="text-sm sm:text-base leading-relaxed mt-4">
+                Hizo un censo que hizo en cada pueblo que visitó en la misión vivían 25 familias en 25 casas, de comunión 23, de sola confesión 10, sin bautizar 32, varones 50, hembras 68, fuera del poblado vivían 3 familias.
+              </p>
+              <p class="text-sm sm:text-base leading-relaxed mt-4">
+                En el sitio de Cabimas vivían 19 familias en 20 casas, de comunión 100, de sola confesión 7, 24 niños. En Punta Gorda 5 casas, 5 familias, de comunión 18, de sola confesión 2.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Época Petrolera -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">🛢️ La Época Petrolera</h2>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_02.webp" alt="Pozos petroleros" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-3">El Boom Petrolero</h3>
+                <p class="text-sm sm:text-base leading-relaxed">
+                  A partir de 1922, Cabimas experimentó una transformación radical con el descubrimiento de importantes yacimientos petroleros. El pozo "Los Barrosos 2" marcó el inicio de la era petrolera en Venezuela.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  La ciudad se convirtió en un centro de actividad petrolera, atrayendo trabajadores de todo el país y del extranjero. Las compañías petroleras establecieron campamentos y construyeron infraestructura moderna.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed mt-4">
+                  Este período trajo desarrollo económico pero también cambios sociales y culturales significativos para la región.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desarrollo Municipal -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">🏛️ Desarrollo Municipal</h2>
+          <div class="p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-3">📅 Cronología Histórica</h3>
+                <ul class="text-sm sm:text-base space-y-2">
+                  <li><strong>1579:</strong> Aldea indígena</li>
+                  <li><strong>1829:</strong> Parroquia eclesiástica</li>
+                  <li><strong>1830-1835:</strong> Parroquia civil</li>
+                  <li><strong>1870-1904:</strong> Distrito</li>
+                  <li><strong>1922:</strong> Inicio de la era petrolera</li>
+                  <li><strong>1989:</strong> Municipio autónomo</li>
+                </ul>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="flex flex-col items-center">
+                  <div class="w-full h-32 rounded-lg shadow-lg overflow-hidden mb-4">
+                    <img src="../Assets/Img/cabimasbg_03.webp" alt="Desarrollo municipal" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-3">🎯 Importancia Histórica</h3>
+                  <p class="text-sm sm:text-base">
+                    Con este testimonio podemos deducir que el origen de lo que hoy tenemos como Cabimas están en la misión y que la fecha de su fundación en 1758 es válida hasta que otros documentos protocolares desautoricen a los presentados por la Biblioteca de la Academia Nacional de la Historia.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -107,14 +242,15 @@
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white w-full p-4 top-0 flex justify-center items-center">
-    <div class="mt-0.5 p-4 flex">
-      <div class="border-r-1 mr-10 pr-8 flex"> <!-- Primera parte de la seccion de pie de página -->
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 05-05-2025 -->
-      </div> <!-- Termina la primera parte de la seccion de pie de página -->
-      <div class="border-r-1 pl-2 pr-8"> <!-- Segunda parte de la seccion de pie de página que contiene las redes sociales -->
-        <p class="flex justify-end">Síguenos en nuestras redes sociales:</p>
-        <div class="mt-2 mr-4 flex justify-end">
+  <!-- Footer responsive -->
+  <footer class="bg-gray-800 text-white w-full p-4 flex flex-col lg:flex-row justify-center items-center">
+    <div class="mt-0.5 p-4 flex flex-col lg:flex-row items-center">
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:mr-10 lg:pr-8 flex justify-center">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:pl-2 lg:pr-8 text-center lg:text-left">
+        <p class="flex justify-center lg:justify-end mb-2">Síguenos en nuestras redes sociales:</p>
+        <div class="mt-2 mr-4 flex justify-center lg:justify-end">
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
               <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -124,7 +260,7 @@
                 </g>
               </g>
             </svg>
-            <span>Facebook</span>
+            <span class="text-sm">Facebook</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -135,7 +271,7 @@
                 </g>
               </g>
             </svg>
-            <span>X</span>
+            <span class="text-sm">X</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -146,17 +282,24 @@
                 </g>
               </g>
             </svg>
-            <span>Instragram</span>
+            <span class="text-sm">Instagram</span>
           </a>
         </div>
-      </div> <!-- Final de la segunda parte de la seccion de pie de página que contiene las redes sociales -->
-      <div class="ml-10 pl-2 text-center"> <!-- Tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
-        <p>&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
-        <p>Desarrollado por Ejeoxlac</p>
-      </div> <!-- Final de la tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
+      </div>
+      <div class="lg:ml-10 lg:pl-2 text-center">
+        <p class="text-sm">&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
+        <p class="text-sm">Desarrollado por Ejeoxlac</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/imgcarousel.js"></script> <!-- Script para el carrusel de imagenes de presentación -->
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="../js/imgcarousel.js"></script>
 </body>
 </html>

@@ -8,233 +8,159 @@
   <title>Funcionarios de Cabimas - Web sobre Cabimas</title>
 </head>
 <body>
-  <header class="bg-gray-800 text-white w-full h-16 z-50 p-4 top-0 fixed flex justify-between items-center">
-    <div>
-      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 04-05-2025 -->
+  <!-- Header responsive con menú hamburguesa para móviles -->
+  <header class="bg-gray-800 text-white w-full h-auto min-h-16 z-50 p-4 top-0 fixed flex flex-col lg:flex-row justify-between items-center">
+    <div class="flex justify-between items-center w-full lg:w-auto">
+      <div>
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      
+      <!-- Botón hamburguesa para móviles -->
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
 
-    <nav class="ml-35">
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="home.html" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="news.html" class="hover:text-gray-400">Noticias</a></li>
-        <li><a href="services.html" class="hover:text-gray-400">Servicios</a></li>
-        <li><a href="gazette.html" class="hover:text-gray-400">Gaceta</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="officials.html" class="hover:text-gray-400">Funcionarios</a></li>
-        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre nosotros</a></li>
-        <li><a href="History.html" class="hover:text-gray-400">Historia</a></li>
+    <!-- Navegación responsive -->
+    <nav id="nav-menu" class="hidden lg:flex w-full lg:w-auto mt-4 lg:mt-0">
+      <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 w-full lg:w-auto">
+        <li><a href="home.html" class="hover:text-gray-400 px-2 py-1 block">Inicio</a></li>
+        <li><a href="news.html" class="hover:text-gray-400 px-2 py-1 block">Noticias</a></li>
+        <li><a href="services.html" class="hover:text-gray-400 px-2 py-1 block">Servicios</a></li>
+        <li><a href="gazette.html" class="hover:text-gray-400 px-2 py-1 block">Gaceta</a></li>
+        <li><a href="officials.html" class="hover:text-gray-400 px-2 py-1 block">Funcionarios</a></li>
+        <li><a href="aboutus.html" class="hover:text-gray-400 px-2 py-1 block">Sobre nosotros</a></li>
+        <li><a href="History.html" class="hover:text-gray-400 px-2 py-1 block">Historia</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="w-full mt-16 relative overflow-hidden"> <!-- Sección de la imagen de fondo -->
+  <main class="pt-20 lg:pt-16">
+    <!-- Sección del carrusel responsive -->
+    <section class="w-full relative overflow-hidden">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
       </div>
-      <h1 class="bg-neutral-950/50 text-white font-bold text-3xl w-full h-full mr-20 top-0 left-0 absolute flex justify-center items-center">Funcionarios de Cabimas</h1>
+      <h1 class="bg-neutral-950/50 text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl w-full h-full top-0 left-0 absolute flex justify-center items-center text-center px-4">Funcionarios de Cabimas</h1>
     </section>
 
     <section class="bg-gray-300 p-2">
       <div class="p-2">
-        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Partido</h1>
-          <div class="bg-gray-600/70 text-white p-4 flex">
-            <div class="border-gray-800 border-r-8 w-auto mr-4 pr-4">
-              <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-70 h-40 flex-shrink-0 object-cover">
-            </div>
-            <div>
-              <p class="pb-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est illum nobis modi nam porro pariatur sed.
-                <br>
-                aperiam cum qui et magnam dolorum ad quia ea, error adipisci? Quia, reiciendis id?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit beatae a ad quod quae libero, dolor laborum magnam! Dolorum fugiat eius dignissimos, harum rem laudantium unde quaerat hic amet.
-              </p>
+        <!-- Sección del partido -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h1 class="bg-gray-800 text-white text-xl sm:text-2xl lg:text-3xl font-bold p-4">🏛️ Gobierno Municipal</h1>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Conoce a los funcionarios que trabajan por el desarrollo de Cabimas</p>
+          <div class="p-4">
+            <div class="flex flex-col lg:flex-row gap-6 items-center">
+              <div class="w-full lg:w-1/2 h-48 sm:h-64 rounded-lg shadow-lg overflow-hidden">
+                <img src="../Assets/Img/cabimasbg_01.webp" alt="Gobierno Municipal" class="w-full h-full object-cover">
+              </div>
+              <div class="w-full lg:w-1/2">
+                <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-4">Nuestro Compromiso</h2>
+                <p class="text-sm sm:text-base leading-relaxed mb-4">
+                  El gobierno municipal de Cabimas está comprometido con el desarrollo integral de nuestra ciudad. Nuestros funcionarios trabajan día a día para mejorar la calidad de vida de todos los ciudadanos de Cabimas.
+                </p>
+                <p class="text-sm sm:text-base leading-relaxed">
+                  A través de políticas transparentes y eficientes, buscamos promover el crecimiento económico, social y cultural de nuestra comunidad, siempre manteniendo como prioridad el bienestar de nuestros ciudadanos.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Funcionarios</h1>
-          <div class="grid grid-cols-3">
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
+        <!-- Sección de funcionarios -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">👥 Funcionarios Principales</h2>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Conoce al equipo que lidera la administración municipal</p>
+          <div class="p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Funcionario 1 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/profiles/profile_1.jpg" alt="Pepe Jaramillo" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Pepe Jaramillo</h3>
+                  <p class="text-sm sm:text-base text-blue-600 font-semibold mb-3">Alcalde</p>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Líder del gobierno municipal, comprometido con el desarrollo integral de Cabimas y el bienestar de todos sus ciudadanos.
+                  </p>
+                </div>
               </div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
-              </div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
-              </div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Equipo</h1>
-          <div class="grid grid-cols-3">
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
+              <!-- Funcionario 2 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/profiles/profile_2.jpg" alt="María González" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">María González</h3>
+                  <p class="text-sm sm:text-base text-blue-600 font-semibold mb-3">Vicealcaldesa</p>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Apoya la gestión municipal y coordina programas sociales para mejorar la calidad de vida de la comunidad.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
+
+              <!-- Funcionario 3 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/profiles/profile_3.jpg" alt="Carlos Rodríguez" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Carlos Rodríguez</h3>
+                  <p class="text-sm sm:text-base text-blue-600 font-semibold mb-3">Secretario General</p>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Coordina la administración municipal y supervisa la implementación de políticas públicas efectivas.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
+
+              <!-- Funcionario 4 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/profiles/profile_4.jpg" alt="Ana López" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Ana López</h3>
+                  <p class="text-sm sm:text-base text-blue-600 font-semibold mb-3">Directora de Finanzas</p>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Gestiona los recursos municipales de manera transparente y eficiente para el desarrollo de la ciudad.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
+
+              <!-- Funcionario 5 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/profiles/profile_5.jpg" alt="Luis Martínez" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Luis Martínez</h3>
+                  <p class="text-sm sm:text-base text-blue-600 font-semibold mb-3">Director de Obras Públicas</p>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Supervisa proyectos de infraestructura y mantenimiento para mejorar la calidad de vida en Cabimas.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
+
+              <!-- Funcionario 6 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/profiles/profile_1.jpg" alt="Pedro Sánchez" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Pedro Sánchez</h3>
+                  <p class="text-sm sm:text-base text-blue-600 font-semibold mb-3">Asesor Legal</p>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Proporciona asesoría legal y asegura el cumplimiento de las normativas municipales vigentes.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <img src="../Assets/Img/profiles/profile_1.jpg" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              <div class="font-bold pt-4">
-                <h3>
-                  Pepe Jaramillo
-                  <span>prueba</span>
-                </h3>
-                <small class="text-yellow-300">Jefe</small>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
             </div>
           </div>
         </div>
@@ -242,14 +168,15 @@
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white w-full p-4 top-0 flex justify-center items-center">
-    <div class="mt-0.5 p-4 flex">
-      <div class="border-r-1 mr-10 pr-8 flex"> <!-- Primera parte de la seccion de pie de página -->
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 05-05-2025 -->
-      </div> <!-- Termina la primera parte de la seccion de pie de página -->
-      <div class="border-r-1 pl-2 pr-8"> <!-- Segunda parte de la seccion de pie de página que contiene las redes sociales -->
-        <p class="flex justify-end">Síguenos en nuestras redes sociales:</p>
-        <div class="mt-2 mr-4 flex justify-end">
+  <!-- Footer responsive -->
+  <footer class="bg-gray-800 text-white w-full p-4 flex flex-col lg:flex-row justify-center items-center">
+    <div class="mt-0.5 p-4 flex flex-col lg:flex-row items-center">
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:mr-10 lg:pr-8 flex justify-center">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:pl-2 lg:pr-8 text-center lg:text-left">
+        <p class="flex justify-center lg:justify-end mb-2">Síguenos en nuestras redes sociales:</p>
+        <div class="mt-2 mr-4 flex justify-center lg:justify-end">
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
               <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -259,7 +186,7 @@
                 </g>
               </g>
             </svg>
-            <span>Facebook</span>
+            <span class="text-sm">Facebook</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -270,7 +197,7 @@
                 </g>
               </g>
             </svg>
-            <span>X</span>
+            <span class="text-sm">X</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -281,17 +208,24 @@
                 </g>
               </g>
             </svg>
-            <span>Instragram</span>
+            <span class="text-sm">Instagram</span>
           </a>
         </div>
-      </div> <!-- Final de la segunda parte de la seccion de pie de página que contiene las redes sociales -->
-      <div class="ml-10 pl-2 text-center"> <!-- Tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
-        <p>&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
-        <p>Desarrollado por Ejeoxlac</p>
-      </div> <!-- Final de la tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
+      </div>
+      <div class="lg:ml-10 lg:pl-2 text-center">
+        <p class="text-sm">&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
+        <p class="text-sm">Desarrollado por Ejeoxlac</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/imgcarousel.js"></script> <!-- Script para el carrusel de imagenes de presentación -->
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="../js/imgcarousel.js"></script>
 </body>
 </html>

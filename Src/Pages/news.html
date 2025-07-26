@@ -8,124 +8,153 @@
   <title>Noticias sobre Cabimas - Web sobre Cabimas</title>
 </head>
 <body>
-  <header class="bg-gray-800 text-white w-full h-16 z-50 p-4 top-0 fixed flex justify-between items-center">
-    <div>
-      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 04-05-2025 -->
+  <!-- Header responsive con menú hamburguesa para móviles -->
+  <header class="bg-gray-800 text-white w-full h-auto min-h-16 z-50 p-4 top-0 fixed flex flex-col lg:flex-row justify-between items-center">
+    <div class="flex justify-between items-center w-full lg:w-auto">
+      <div>
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      
+      <!-- Botón hamburguesa para móviles -->
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
 
-    <nav class="ml-35">
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="home.html" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="news.html" class="hover:text-gray-400">Noticias</a></li>
-        <li><a href="services.html" class="hover:text-gray-400">Servicios</a></li>
-        <li><a href="gazette.html" class="hover:text-gray-400">Gaceta</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="officials.html" class="hover:text-gray-400">Funcionarios</a></li>
-        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre nosotros</a></li>
-        <li><a href="History.html" class="hover:text-gray-400">Historia</a></li>
+    <!-- Navegación responsive -->
+    <nav id="nav-menu" class="hidden lg:flex w-full lg:w-auto mt-4 lg:mt-0">
+      <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 w-full lg:w-auto">
+        <li><a href="home.html" class="hover:text-gray-400 px-2 py-1 block">Inicio</a></li>
+        <li><a href="news.html" class="hover:text-gray-400 px-2 py-1 block">Noticias</a></li>
+        <li><a href="services.html" class="hover:text-gray-400 px-2 py-1 block">Servicios</a></li>
+        <li><a href="gazette.html" class="hover:text-gray-400 px-2 py-1 block">Gaceta</a></li>
+        <li><a href="officials.html" class="hover:text-gray-400 px-2 py-1 block">Funcionarios</a></li>
+        <li><a href="aboutus.html" class="hover:text-gray-400 px-2 py-1 block">Sobre nosotros</a></li>
+        <li><a href="History.html" class="hover:text-gray-400 px-2 py-1 block">Historia</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="w-full mt-16 relative overflow-hidden"> <!-- Sección de la imagen de fondo -->
+  <main class="pt-20 lg:pt-16">
+    <!-- Sección del carrusel responsive -->
+    <section class="w-full relative overflow-hidden">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
       </div>
-      <h1 class="bg-neutral-950/50 text-white font-bold text-3xl w-full h-full mr-20 top-0 left-0 absolute flex justify-center items-center">Noticias de Cabimas</h1>
+      <h1 class="bg-neutral-950/50 text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl w-full h-full top-0 left-0 absolute flex justify-center items-center text-center px-4">Noticias de Cabimas</h1>
     </section>
 
     <section class="bg-gray-300 p-2">
       <div class="p-2">
-        <div class="bg-gray-600/70 border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold p-4">Sección de noticias</h1>
-          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Aquí encontrarás información relevante y actualizada.</p>
-          <div class="p-2"> <!-- Cuadro lateral derecho que muestra algunas noticias -->
-            <ol class="mt-4 grid gap-4">
-              <li class="bg-white rounded-2xl">
-                <a href="#" class="text-blue-500 hover:underline">
-                  <div class="rounded shadow-lg flex">
-                    <div class="w-auto pr-6">
-                      <img class="w-full h-full rounded-l-2xl object-cover" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
-                    </div>
-                    <div class="py-4">
-                      <h1 class="text-xl font-bold mb-2">Noticia-1</h1>
-                      <p class="text-gray-700 text-base">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
-                      </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2 flex flex-wrap">
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#mantenimientos</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#obraspúblicas</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#larosa</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#calles</span>
+        <!-- Sección de noticias locales -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h1 class="bg-gray-800 text-white text-xl sm:text-2xl lg:text-3xl font-bold p-4">📰 Noticias Locales</h1>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Mantente informado con las noticias más recientes e importantes de nuestra ciudad</p>
+          <div class="p-4">
+            <div class="space-y-6">
+              <!-- Noticia 1 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="flex flex-col lg:flex-row">
+                  <div class="w-full lg:w-1/3 h-48 lg:h-auto">
+                    <img class="w-full h-full object-cover" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
+                  </div>
+                  <div class="p-6 flex-1">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Noticia-1</h2>
+                    <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">#mantenimientos</span>
+                      <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">#obraspúblicas</span>
+                      <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">#larosa</span>
+                      <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">#calles</span>
                     </div>
                   </div>
-                </a>
-              </li>
-              <li class="bg-white rounded-2xl">
-                <a href="#" class="text-blue-500 hover:underline">
-                  <div class="rounded shadow-lg flex">
-                    <div class="w-auto pr-6">
-                      <img class="w-full h-full rounded-l-2xl object-cover" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
-                    </div>
-                    <div class="py-4">
-                      <h1 class="text-xl font-bold mb-2">Noticia-1</h1>
-                      <p class="text-gray-700 text-base">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
-                      </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2 flex flex-wrap">
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#mantenimientos</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#obraspúblicas</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#larosa</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#calles</span>
+                </div>
+              </div>
+
+              <!-- Noticia 2 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="flex flex-col lg:flex-row">
+                  <div class="w-full lg:w-1/3 h-48 lg:h-auto">
+                    <img class="w-full h-full object-cover" src="../Assets/Img/cabimasbg_02.webp" alt="Noticia-2">
+                  </div>
+                  <div class="p-6 flex-1">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Noticia-2</h2>
+                    <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">#politica</span>
+                      <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">#leyes</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">#cabimas</span>
                     </div>
                   </div>
-                </a>
-              </li>
-              <li class="bg-white rounded-2xl">
-                <a href="#" class="text-blue-500 hover:underline">
-                  <div class="rounded shadow-lg flex">
-                    <div class="w-auto pr-6">
-                      <img class="w-full h-full rounded-l-2xl object-cover" src="../Assets/Img/cabimasbg_01.webp" alt="Noticia-1">
-                    </div>
-                    <div class="py-4">
-                      <h1 class="text-xl font-bold mb-2">Noticia-1</h1>
-                      <p class="text-gray-700 text-base">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
-                      </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2 flex flex-wrap">
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#mantenimientos</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#obraspúblicas</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#larosa</span>
-                      <span class="bg-gray-200 text-gray-700 text-sm font-semibold mr-2 mb-2 px-3 py-1 inline-block rounded-full">#calles</span>
+                </div>
+              </div>
+
+              <!-- Noticia 3 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="flex flex-col lg:flex-row">
+                  <div class="w-full lg:w-1/3 h-48 lg:h-auto">
+                    <img class="w-full h-full object-cover" src="../Assets/Img/cabimasbg_03.webp" alt="Noticia-3">
+                  </div>
+                  <div class="p-6 flex-1">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Noticia-3</h2>
+                    <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam sunt quibusdam vero quis aspernatur nesciunt temporibus id assumenda explicabo porro, libero, qui a vitae aliquam eum cumque distinctio quod.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">#politica</span>
+                      <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">#leyes</span>
+                      <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">#zulia</span>
                     </div>
                   </div>
-                </a>
-              </li>
-            </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de publicaciones de Instagram -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h2 class="bg-gray-800 text-white text-lg sm:text-xl lg:text-2xl font-bold p-4">📱 Últimas Publicaciones de Instagram</h2>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Síguenos en Instagram para contenido exclusivo y actualizaciones en tiempo real</p>
+          <div class="p-4">
+            <!-- Contenedor para las publicaciones de Instagram -->
+            <div id="instagram-posts">
+              <!-- Las publicaciones de Instagram se cargarán aquí automáticamente -->
+            </div>
+            
+            <!-- Botón para seguir en Instagram -->
+            <div class="text-center mt-8">
+              <a href="https://instagram.com/tu_cuenta_de_instagram" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 text-lg font-semibold">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Seguir en Instagram
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white w-full p-4 top-0 flex justify-center items-center">
-    <div class="mt-0.5 p-4 flex">
-      <div class="border-r-1 mr-10 pr-8 flex"> <!-- Primera parte de la seccion de pie de página -->
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 05-05-2025 -->
-      </div> <!-- Termina la primera parte de la seccion de pie de página -->
-      <div class="border-r-1 pl-2 pr-8"> <!-- Segunda parte de la seccion de pie de página que contiene las redes sociales -->
-        <p class="flex justify-end">Síguenos en nuestras redes sociales:</p>
-        <div class="mt-2 mr-4 flex justify-end">
+  <!-- Footer responsive -->
+  <footer class="bg-gray-800 text-white w-full p-4 flex flex-col lg:flex-row justify-center items-center">
+    <div class="mt-0.5 p-4 flex flex-col lg:flex-row items-center">
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:mr-10 lg:pr-8 flex justify-center">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:pl-2 lg:pr-8 text-center lg:text-left">
+        <p class="flex justify-center lg:justify-end mb-2">Síguenos en nuestras redes sociales:</p>
+        <div class="mt-2 mr-4 flex justify-center lg:justify-end">
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
               <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -135,7 +164,7 @@
                 </g>
               </g>
             </svg>
-            <span>Facebook</span>
+            <span class="text-sm">Facebook</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -146,7 +175,7 @@
                 </g>
               </g>
             </svg>
-            <span>X</span>
+            <span class="text-sm">X</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -157,17 +186,26 @@
                 </g>
               </g>
             </svg>
-            <span>Instragram</span>
+            <span class="text-sm">Instagram</span>
           </a>
         </div>
-      </div> <!-- Final de la segunda parte de la seccion de pie de página que contiene las redes sociales -->
-      <div class="ml-10 pl-2 text-center"> <!-- Tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
-        <p>&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
-        <p>Desarrollado por Ejeoxlac</p>
-      </div> <!-- Final de la tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
+      </div>
+      <div class="lg:ml-10 lg:pl-2 text-center">
+        <p class="text-sm">&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
+        <p class="text-sm">Desarrollado por Ejeoxlac</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/imgcarousel.js"></script> <!-- Script para el carrusel de imagenes de presentación -->
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="../js/imgcarousel.js"></script>
+  <!-- Script para la API de Instagram -->
+  <script src="../js/instagram-api.js"></script>
 </body>
 </html>

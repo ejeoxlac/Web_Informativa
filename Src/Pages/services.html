@@ -8,169 +8,170 @@
   <title>Servicios de Cabimas - Web sobre Cabimas</title>
 </head>
 <body>
-  <header class="bg-gray-800 text-white w-full h-16 z-50 p-4 top-0 fixed flex justify-between items-center">
-    <div>
-      <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 04-05-2025 -->
+  <!-- Header responsive con menú hamburguesa para móviles -->
+  <header class="bg-gray-800 text-white w-full h-auto min-h-16 z-50 p-4 top-0 fixed flex flex-col lg:flex-row justify-between items-center">
+    <div class="flex justify-between items-center w-full lg:w-auto">
+      <div>
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      
+      <!-- Botón hamburguesa para móviles -->
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
 
-    <nav class="ml-35">
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="home.html" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="news.html" class="hover:text-gray-400">Noticias</a></li>
-        <li><a href="services.html" class="hover:text-gray-400">Servicios</a></li>
-        <li><a href="gazette.html" class="hover:text-gray-400">Gaceta</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul class="flex [&>li>a]:px-1.5">
-        <li><a href="officials.html" class="hover:text-gray-400">Funcionarios</a></li>
-        <li><a href="aboutus.html" class="hover:text-gray-400">Sobre nosotros</a></li>
-        <li><a href="History.html" class="hover:text-gray-400">Historia</a></li>
+    <!-- Navegación responsive -->
+    <nav id="nav-menu" class="hidden lg:flex w-full lg:w-auto mt-4 lg:mt-0">
+      <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 w-full lg:w-auto">
+        <li><a href="home.html" class="hover:text-gray-400 px-2 py-1 block">Inicio</a></li>
+        <li><a href="news.html" class="hover:text-gray-400 px-2 py-1 block">Noticias</a></li>
+        <li><a href="services.html" class="hover:text-gray-400 px-2 py-1 block">Servicios</a></li>
+        <li><a href="gazette.html" class="hover:text-gray-400 px-2 py-1 block">Gaceta</a></li>
+        <li><a href="officials.html" class="hover:text-gray-400 px-2 py-1 block">Funcionarios</a></li>
+        <li><a href="aboutus.html" class="hover:text-gray-400 px-2 py-1 block">Sobre nosotros</a></li>
+        <li><a href="History.html" class="hover:text-gray-400 px-2 py-1 block">Historia</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="w-full mt-16 relative overflow-hidden"> <!-- Sección de la imagen de fondo -->
+  <main class="pt-20 lg:pt-16">
+    <!-- Sección del carrusel responsive -->
+    <section class="w-full relative overflow-hidden">
       <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-80 flex-shrink-0 object-cover">
-        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen bg 1" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_02.webp" alt="Imagen bg 2" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
+        <img src="../Assets/Img/cabimasbg_03.webp" alt="Imagen bg 3" class="w-full h-48 sm:h-64 md:h-80 flex-shrink-0 object-cover">
       </div>
-      <h1 class="bg-neutral-950/50 text-white font-bold text-3xl w-full h-full mr-20 top-0 left-0 absolute flex justify-center items-center">Servicios</h1>
+      <h1 class="bg-neutral-950/50 text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl w-full h-full top-0 left-0 absolute flex justify-center items-center text-center px-4">Servicios</h1>
     </section>
 
     <section class="bg-gray-300 p-2">
       <div class="p-2">
-        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4">
-          <h1 class="bg-gray-800 text-white text-3xl font-bold text-center p-4">Servicios de Cabimas</h1>
-          <div class="grid grid-cols-3">
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+        <!-- Sección de servicios -->
+        <div class="bg-white border-gray-800 border-t-20 border-l-8 border-r-8 border-b-8 mt-4 mb-6">
+          <h1 class="bg-gray-800 text-white text-xl sm:text-2xl lg:text-3xl font-bold p-4">🛠️ Servicios de Cabimas</h1>
+          <p class="bg-gray-800 text-white font-bold pl-4 pb-4">Descubre todos los servicios que ofrecemos para la comunidad de Cabimas</p>
+          <div class="p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Servicio 1 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_01.webp" alt="Gobierno de Cabimas" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🏛️ Gobierno de Cabimas</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Encuentre información sobre Cabimas, quiénes son sus funcionarios electos y cómo funciona la administración local.
+                  </p>
+                </div>
               </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  xxxxx
-                </h3>
+
+              <!-- Servicio 2 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_02.webp" alt="Beneficios del Gobierno" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">💰 Beneficios del Gobierno</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Encuentre información sobre los programas de asistencia, requisitos para solicitar beneficios o ayuda económica.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+
+              <!-- Servicio 3 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_03.webp" alt="Estafas y fraudes" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🛡️ Estafas y fraudes</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Aprenda cómo protegerse de las estafas, fraudes, llamadas de telemercadeo y dónde reportarlas.
+                  </p>
+                </div>
               </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  xxxxx
-                </h3>
+
+              <!-- Servicio 4 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_04.webp" alt="Servicios para personas con discapacidades" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">♿ Servicios para personas con discapacidades</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Encuentre ayuda económica y beneficios del Gobierno para personas con discapacidades.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi cupiditate natus quo nemo. Velit dicta minus ullam, aliquid corrupti iste itaque dignissimos voluptatibus delectus porro aliquam quos? Ullam, asperiores consequatur?
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+
+              <!-- Servicio 5 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_01.webp" alt="Servicios de emergencia" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🚨 Servicios de emergencia</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Información sobre servicios de emergencia, números de contacto y procedimientos en caso de emergencias en la ciudad.
+                  </p>
+                </div>
               </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  Beneficios del Gobierno
-                </h3>
+
+              <!-- Servicio 6 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_02.webp" alt="Transporte público" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🚌 Transporte público</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Información sobre rutas de transporte público, horarios y tarifas de los servicios de transporte en Cabimas.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Encuentre información sobre los programas de asistencia, requisitos para solicitar beneficios o ayuda económica, cómo y dónde aplicar.
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+
+              <!-- Servicio 7 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_03.webp" alt="Educación" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">📚 Educación</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Información sobre instituciones educativas, programas de becas y servicios educativos disponibles en la ciudad.
+                  </p>
+                </div>
               </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  Estafas y fraudes
-                </h3>
+
+              <!-- Servicio 8 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_04.webp" alt="Salud" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🏥 Salud</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Información sobre centros de salud, servicios médicos y programas de atención sanitaria disponibles en Cabimas.
+                  </p>
+                </div>
               </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Aprenda cómo protegerse de las estafas, fraudes, llamadas de telemercadeo y dónde reportarlas o poner una queja o denuncia.
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
+
+              <!-- Servicio 9 -->
+              <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="h-48 overflow-hidden">
+                  <img src="../Assets/Img/cabimasbg_01.webp" alt="Servicios municipales" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🏢 Servicios municipales</h3>
+                  <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Información sobre trámites municipales, servicios públicos y atención al ciudadano en la alcaldía.
+                  </p>
+                </div>
               </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  Servicios para personas con discapacidades
-                </h3>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Encuentre ayuda económica y beneficios del Gobierno para personas con discapacidades y sepa cómo seguir recibiéndolos si trabaja o le pagan por cuidar a un familiar.
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  xxxxx
-                </h3>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi recusandae facere laborum, saepe accusantium deserunt perferendis aliquid corrupti doloremque, veniam quia nulla, possimus iste temporibus culpa explicabo consequatur expedita neque!.
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  Vivienda
-                </h3>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Información sobre su hogar, pagar el alquiler, comprar vivienda, terrenos y evitar la ejecución hipotecaria, entre otros
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  Leyes y asuntos legales
-                </h3>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Aprenda cómo renovar documentos de identidad, reclamar la manutención infantil, apostillar documentos, reportar crímenes y recibir ayuda si fue víctima de un delito.
-              </p>
-            </div>
-            <div class="bg-gray-600/70 text-white border-gray-800 border-r-8 border-b-8 pt-4 pl-4 pb-4">
-              <div class="flex justify-center">
-                <img src="../Assets/Img/cabimasbg_01.webp" alt="Imagen pf 1" class="rounded-2xl w-65 h-60 object-cover shadow-[10px_10px_15px_rgba(0,0,0,0.4)]">
-              </div>
-              <div class="font-bold pt-4 text-center">
-                <h3>
-                  Impuestos
-                </h3>
-              </div>
-              <div class="border-gray-800 border-b-2 mr-5"></div>
-              <p>
-                Aprenda cómo declarar impuestos, pagar impuestos, buscar ayuda para hacer los impuestos, verificar dónde está su reembolso y más.
-              </p>
             </div>
           </div>
         </div>
@@ -178,14 +179,15 @@
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white w-full p-4 top-0 flex justify-center items-center">
-    <div class="mt-0.5 p-4 flex">
-      <div class="border-r-1 mr-10 pr-8 flex"> <!-- Primera parte de la seccion de pie de página -->
-        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full"> <!-- Aqui use una imagen de ejemplo que es la imagen de fondo ya que no tengo logo de ejemplo ahorita / 05-05-2025 -->
-      </div> <!-- Termina la primera parte de la seccion de pie de página -->
-      <div class="border-r-1 pl-2 pr-8"> <!-- Segunda parte de la seccion de pie de página que contiene las redes sociales -->
-        <p class="flex justify-end">Síguenos en nuestras redes sociales:</p>
-        <div class="mt-2 mr-4 flex justify-end">
+  <!-- Footer responsive -->
+  <footer class="bg-gray-800 text-white w-full p-4 flex flex-col lg:flex-row justify-center items-center">
+    <div class="mt-0.5 p-4 flex flex-col lg:flex-row items-center">
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:mr-10 lg:pr-8 flex justify-center">
+        <img src="../Assets/Img/cabimasbg_01.webp" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      <div class="border-b lg:border-b-0 lg:border-r-1 mb-4 lg:mb-0 lg:pl-2 lg:pr-8 text-center lg:text-left">
+        <p class="flex justify-center lg:justify-end mb-2">Síguenos en nuestras redes sociales:</p>
+        <div class="mt-2 mr-4 flex justify-center lg:justify-end">
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
               <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -195,7 +197,7 @@
                 </g>
               </g>
             </svg>
-            <span>Facebook</span>
+            <span class="text-sm">Facebook</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -206,7 +208,7 @@
                 </g>
               </g>
             </svg>
-            <span>X</span>
+            <span class="text-sm">X</span>
           </a>
           <a href="#" class="mx-2 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -217,17 +219,24 @@
                 </g>
               </g>
             </svg>
-            <span>Instragram</span>
+            <span class="text-sm">Instagram</span>
           </a>
         </div>
-      </div> <!-- Final de la segunda parte de la seccion de pie de página que contiene las redes sociales -->
-      <div class="ml-10 pl-2 text-center"> <!-- Tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
-        <p>&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
-        <p>Desarrollado por Ejeoxlac</p>
-      </div> <!-- Final de la tercera parte de la seccion de pie de página que contiene el copyright y el desarrollador -->
+      </div>
+      <div class="lg:ml-10 lg:pl-2 text-center">
+        <p class="text-sm">&copy; 2025 Web Informativa. Todos los derechos reservados.</p>
+        <p class="text-sm">Desarrollado por Ejeoxlac</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/imgcarousel.js"></script> <!-- Script para el carrusel de imagenes de presentación -->
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="../js/imgcarousel.js"></script>
 </body>
 </html>
