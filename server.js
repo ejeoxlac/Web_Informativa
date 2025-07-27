@@ -11,6 +11,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('Src'));
 
+// Ruta específica para archivos estáticos
+app.use('/Assets', express.static(path.join(__dirname, 'Src/Assets')));
+app.use('/Styles', express.static(path.join(__dirname, 'Src/Styles')));
+app.use('/js', express.static(path.join(__dirname, 'Src/js')));
+
 // Configuración de Instagram desde variables de entorno
 const INSTAGRAM_CONFIG = {
     accessToken: process.env.INSTAGRAM_ACCESS_TOKEN,
@@ -144,6 +149,9 @@ app.get('/gazette', (req, res) => {
     res.sendFile(path.join(__dirname, 'Src/Pages/gazette.html'));
 });
 
+app.get('/test-images', (req, res) => {
+    res.sendFile(path.join(__dirname, 'test-images.html'));
+});
 
 
 // Ruta para archivos HTML directos
